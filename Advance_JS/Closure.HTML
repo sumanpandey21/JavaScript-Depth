@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+    function clickHandler(color) {
+
+        // It returns an inner function (closure) that has access to the 'color' variable
+        return function () {
+            // This inner function changes the background color of the webpage
+            // It uses the 'color' value passed to the outer function
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+
+    // The DOM element with ID 'orange' is selected
+    // We assign an 'onclick' handler by calling clickHandler("orange")
+    // This will return a function that remembers the color "orange" due to closure
+    document.getElementById('orange').onclick = clickHandler("orange");
+
+    // Similarly, we do the same for the element with ID 'green'
+    document.getElementById('green').onclick = clickHandler("green");
+
+
+</script>
+
+</html>

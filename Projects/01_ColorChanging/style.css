@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h2,
+h3 {
+    text-align: center;
+}   
+
+.boxes {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 3px solid rgb(12, 10, 10);
+    padding: 50px;
+    cursor: pointer;
+}
+.bg-gray{
+    background-color: gray;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-yellow{
+    background-color: yellow;
+}
