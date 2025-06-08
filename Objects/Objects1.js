@@ -15,6 +15,7 @@ console.log(JSUser["email"])
 console.log(JSUser[mySymbol]);
 
 JSUser.email = "sumanpandey@gmail.com"; // modify objects key's value
+
 // Object.freeze(JSUser) // after this the modification will not applied so we comment at this time
 
 console.log(JSUser);
